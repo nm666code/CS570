@@ -114,9 +114,9 @@ def full_dp(s, t):
 
 def hirschberg(a, b):
     if len(a) == 0:
-        return 0, '_' * len(b), b
+        return len(b) * DELTA, '_' * len(b), b
     if len(b) == 0:
-        return 0, a, '_' * len(a)
+        return len(a) * DELTA, a, '_' * len(a)
 
     if len(a) == 1 or len(b) == 1:
         return full_dp(a, b)
